@@ -3,12 +3,13 @@
     Young spirit-order
 @endsection
 @section('content')
-    <div class="container">
-        <div class="card">
-            <div class="card-title">Pending Orders
+    <div class="container my-5">
+        <div class="card p-4">
+
+            <div class="card-title text-center"><h2>Pending Orders</h2>
             </div>
             <div class="card-body">
-                    <table>
+                    <table class="table">
                         <tr>
                             <th>User Id</th>
                             <th>shipping Information</th>
@@ -22,13 +23,15 @@
                             <tr>
                                 <td>{{$order->user_id}}</td>
                                 <td><ul>
-                                        <li>Phone Number: {{$order->phone_number}}</li>
+                                        <li>Phone Number: {{$order->shipping_phonenumbeR}}</li>
+                                        <li>City: {{$order->shipping_city}}</li>
+                                        <li>Address {{$order->shipping_address}}</li>
                                     </ul></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{$order->product_id}}</td>
+                                <td>{{$order->quantity}}</td>
+                                <td>{{$order->total_price}}</td>
+                                <td>{{$order->status}}</td>
+                                <td><a href="" class="btn btn-success">Accept</a></td>
                             </tr>
                         @endforeach
                     </table>

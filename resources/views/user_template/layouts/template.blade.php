@@ -134,7 +134,7 @@
 
 
 
-    <div class="banner_section layout_padding" style=" background-image: url({{asset('home/images/mens_sustainable_banner-1200x602.png')}})">
+    <div class="banner_section layout_padding"  id="banner_section" style=" background-image: url({{asset('home/images/mens_sustainable_banner-1200x602.png')}})">
         <div class="container">
             <div id="my_slider" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -234,5 +234,11 @@
         }
     },5000)
 </script>
+<script>
+    if (window.location.pathname === "/") {
+        document.getElementById("banner_section").style.display = "block";
+    } else {
+        document.getElementById("banner_section").style.display = "none";
+    }</script>
 </body>
 </html>
